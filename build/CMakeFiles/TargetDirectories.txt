@@ -70,3 +70,15 @@
 /home/arthur/catkin_ws/build/beginner_tutorials/CMakeFiles/beginner_tutorials_gennodejs.dir
 /home/arthur/catkin_ws/build/beginner_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/arthur/catkin_ws/build/beginner_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/install/strip.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/install.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/list_install_components.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/edit_cache.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/rebuild_cache.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/install/local.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/test.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+/home/arthur/catkin_ws/build/turtlesim_joystick/CMakeFiles/geometry_msgs_generate_messages_py.dir
