@@ -97,8 +97,7 @@ def run():
         print('shutting down')
 
     def scale_speed(val):
-        print(val, max_speed/(control_circle_radius - stick_radius)*val)
-        return max_speed/(control_circle_radius - stick_radius)*val
+        return max_speed/float(control_circle_radius - stick_radius)*val
     
     rospy.init_node('turtlesim_joystick', anonymous=True)
     pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
@@ -115,7 +114,7 @@ def run():
 
     while cv2.waitKey(1) != 27:
         cv2.imshow('joystick', frame)
-        velocity_input.linear.x = stick_centre[0]
+        velocity_input.linear.x = scale_speed(stick_centre[0])
         velocity_input.linear.y = scale_speed(stick_centre[1])
         
         

@@ -1,0 +1,472 @@
+<?xml version="1.0" ?>
+<robot name="FoxTrot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find FoxTrot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find FoxTrot_description)/urdf/FoxTrot.trans" />
+<xacro:include filename="$(find FoxTrot_description)/urdf/FoxTrot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.19000000000000003 0.12000000000000004 0.0025"/>
+    <mass value="0.9972076384399332"/>
+    <inertia ixx="0.006145" ixy="0.0" ixz="0.0" iyy="0.017535" iyz="-0.0" izz="0.023676"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FL_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02500000000000002 -0.015000000000000038 -4.336808689942018e-19"/>
+    <mass value="0.19266798695843648"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="4.8e-05" iyz="0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FL_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.014844764540750217 8.673617379884035e-18 3.469446951953614e-18"/>
+    <mass value="0.19489882324271462"/>
+    <inertia ixx="4.8e-05" ixy="0.0" ixz="0.0" iyy="1.5e-05" iyz="-0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FL_thigh_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="6.591949208711867e-16 -0.004999999999999966 -0.09000000000000098"/>
+    <mass value="0.15338784942190076"/>
+    <inertia ixx="0.000452" ixy="-0.0" ixz="0.0" iyy="0.000458" iyz="-0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FL_lower_leg_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.403391292065237e-15 0.005000000000000032 -0.10320492073288678"/>
+    <mass value="0.2165471214673015"/>
+    <inertia ixx="0.001266" ixy="-0.0" ixz="0.0" iyy="0.001267" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 0.025 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 0.025 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FL_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FR_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.025000000000000893 0.015000000000000124 -4.336808689942018e-19"/>
+    <mass value="0.19266798695843648"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="4.8e-05" iyz="-0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.24 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.24 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FR_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01484476454074934 3.3306690738754696e-16 3.469446951953614e-18"/>
+    <mass value="0.19489882324271462"/>
+    <inertia ixx="4.8e-05" ixy="-0.0" ixz="0.0" iyy="1.5e-05" iyz="0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FR_thigh_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.5716594692349872e-15 0.0050000000000001155 -0.09000000000000093"/>
+    <mass value="0.15338784942190076"/>
+    <inertia ixx="0.000452" ixy="0.0" ixz="0.0" iyy="0.000458" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FR_lower_leg_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.312386393477084e-15 0.0050000000000001155 -0.10320492073288684"/>
+    <mass value="0.21654712146730148"/>
+    <inertia ixx="0.001266" ixy="0.0" ixz="-0.0" iyy="0.001267" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.015 -0.255 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.015 -0.255 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/FR_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BL_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.025000000000000355 -0.015000000000003462 2.5587171270657905e-17"/>
+    <mass value="0.19266798695843648"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="4.8e-05" iyz="0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.38 0.0 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.38 0.0 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BL_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.014844764540749955 -4.246603069191224e-15 3.5561831257524545e-17"/>
+    <mass value="0.19489882324271462"/>
+    <inertia ixx="4.8e-05" ixy="-0.0" ixz="-0.0" iyy="1.5e-05" iyz="-0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.38 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.38 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BL_thigh_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.1102230246251565e-15 -0.005000000000004223 -0.09000000000000088"/>
+    <mass value="0.15338784942190076"/>
+    <inertia ixx="0.000452" ixy="0.0" ixz="-0.0" iyy="0.000458" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.395 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.395 0.015 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BL_lower_leg_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.7208456881689926e-15 -0.005000000000004223 -0.10320492073288678"/>
+    <mass value="0.21654712146730148"/>
+    <inertia ixx="0.001266" ixy="-0.0" ixz="0.0" iyy="0.001267" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.395 0.015 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.395 0.015 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BL_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BR_hip_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.024999999999995692 0.014999999999996683 2.5587171270657905e-17"/>
+    <mass value="0.19266798695843648"/>
+    <inertia ixx="1.5e-05" ixy="0.0" ixz="0.0" iyy="4.8e-05" iyz="0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.38 -0.24 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.38 -0.24 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_hip_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BR_motor_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.014844764540754618 -3.941291737419306e-15 3.5561831257524545e-17"/>
+    <mass value="0.19489882324271462"/>
+    <inertia ixx="4.8e-05" ixy="0.0" ixz="-0.0" iyy="1.5e-05" iyz="0.0" izz="4.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.38 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.38 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_motor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BR_thigh_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.83026943495679e-15 0.004999999999996008 -0.09000000000000094"/>
+    <mass value="0.15338784942190076"/>
+    <inertia ixx="0.000452" ixy="0.0" ixz="-0.0" iyy="0.000458" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.395 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.395 -0.255 -0.0025"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BR_lower_leg_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="3.1086244689504383e-15 -0.005000000000004001 -0.10320492073288678"/>
+    <mass value="0.2165471214673015"/>
+    <inertia ixx="0.001266" ixy="-0.0" ixz="0.0" iyy="0.001267" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.395 -0.265 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.395 -0.265 0.1775"/>
+    <geometry>
+      <mesh filename="package://FoxTrot_description/meshes/BR_lower_leg_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0025"/>
+  <parent link="base_link"/>
+  <child link="FL_hip_1"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.0 -0.015 0.0"/>
+  <parent link="FL_hip_1"/>
+  <child link="FL_motor_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.015 0.0 0.0"/>
+  <parent link="FL_motor_1"/>
+  <child link="FL_thigh_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.01 -0.18"/>
+  <parent link="FL_thigh_1"/>
+  <child link="FL_lower_leg_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.24 0.0025"/>
+  <parent link="base_link"/>
+  <child link="FR_hip_1"/>
+</joint>
+
+<joint name="Rev6" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.015 0.0"/>
+  <parent link="FR_hip_1"/>
+  <child link="FR_motor_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rev7" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.015 0.0 0.0"/>
+  <parent link="FR_motor_1"/>
+  <child link="FR_thigh_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev8" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.18"/>
+  <parent link="FR_thigh_1"/>
+  <child link="FR_lower_leg_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rigid9" type="fixed">
+  <origin rpy="0 0 0" xyz="0.38 0.0 0.0025"/>
+  <parent link="base_link"/>
+  <child link="BL_hip_1"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.015 0.0"/>
+  <parent link="BL_hip_1"/>
+  <child link="BL_motor_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="Rev11" type="continuous">
+  <origin rpy="0 0 0" xyz="0.015 0.0 0.0"/>
+  <parent link="BL_motor_1"/>
+  <child link="BL_thigh_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev12" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0 -0.18"/>
+  <parent link="BL_thigh_1"/>
+  <child link="BL_lower_leg_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid13" type="fixed">
+  <origin rpy="0 0 0" xyz="0.38 0.24 0.0025"/>
+  <parent link="base_link"/>
+  <child link="BR_hip_1"/>
+</joint>
+
+<joint name="Rev14" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.015 0.0"/>
+  <parent link="BR_hip_1"/>
+  <child link="BR_motor_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="Rev15" type="continuous">
+  <origin rpy="0 0 0" xyz="0.015 0.0 0.0"/>
+  <parent link="BR_motor_1"/>
+  <child link="BR_thigh_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="Rev16" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.01 -0.18"/>
+  <parent link="BR_thigh_1"/>
+  <child link="BR_lower_leg_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
