@@ -1,2 +1,2 @@
-beginner_tutorials:turtlesim_joystick
+FoxTrot_description:beginner_tutorials:testarm:turtlesim_joystick
 -DCATKIN_DEVEL_PREFIX=/home/arthur/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/arthur/catkin_ws/install -G Unix Makefiles

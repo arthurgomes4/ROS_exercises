@@ -125,5 +125,6 @@ def run():
 if __name__ == '__main__':
     try:
         run()
+        print('press esc to close')
     except rospy.ROSInterruptException:
         pass

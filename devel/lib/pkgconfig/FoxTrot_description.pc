@@ -1,0 +1,8 @@
+prefix=/home/arthur/catkin_ws/devel
+
+Name: FoxTrot_description
+Description: Description of FoxTrot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

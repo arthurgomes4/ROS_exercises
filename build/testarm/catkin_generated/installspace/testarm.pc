@@ -1,0 +1,8 @@
+prefix=/home/arthur/catkin_ws/install
+
+Name: testarm
+Description: Description of testarm
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

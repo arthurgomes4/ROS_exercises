@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="testarm">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.009809 0.014873 0.028912"
+        rpy="0 0 0" />
+      <mass
+        value="0.0068061" />
+      <inertia
+        ixx="8.3374E-07"
+        ixy="-3.4814E-23"
+        ixz="-5.0638E-23"
+        iyy="8.3775E-07"
+        iyz="-3.6391E-24"
+        izz="6.1787E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.1 0.005 -6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.041571" />
+      <inertia
+        ixx="1.7485E-06"
+        ixy="-3.25E-22"
+        ixz="-2.4313E-21"
+        iyy="0.00015318"
+        iyz="-3.4096E-23"
+        izz="0.00015212" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev_1"
+    type="continuous">
+    <origin
+      xyz="0.004809 -0.028912 0.022287"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.10603 -0.01 -0.00033269"
+        rpy="0 0 0" />
+      <mass
+        value="0.047215" />
+      <inertia
+        ixx="3.8164E-06"
+        ixy="1.2428E-21"
+        ixz="-1.0048E-06"
+        iyy="0.00016282"
+        iyz="-1.1081E-22"
+        izz="0.00016059" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev_2"
+    type="continuous">
+    <origin
+      xyz="-0.2 0.005 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.069331 0 -1.7347E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.011896" />
+      <inertia
+        ixx="6.0089E-07"
+        ixy="-4.1019E-22"
+        ixz="-8.3328E-23"
+        iyy="1.5356E-05"
+        iyz="4.5517E-24"
+        izz="1.5792E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://testarm/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev_3"
+    type="continuous">
+    <origin
+      xyz="-0.17 -0.01 0"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
